@@ -3,7 +3,7 @@ namespace QuartzSample.Configurations;
 
 public static class AppConfigurator
 {
-    public static void ConfigQuartz(IServiceCollection serviceCollection, IConfiguration configuration)
+    public static void ConfigQuartz(this IServiceCollection serviceCollection, IConfiguration configuration)
     {
         var setting = configuration.GetSection(nameof(JobSetting)).Get<JobSetting>();
 

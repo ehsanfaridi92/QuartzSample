@@ -22,7 +22,7 @@ public class Program
         Host.CreateDefaultBuilder(args)
         .ConfigureServices((hostingContext, services) =>
         {
-            AppConfigurator.ConfigQuartz(services, hostingContext.Configuration);
+            services.ConfigQuartz(hostingContext.Configuration);
 
         });
 }
